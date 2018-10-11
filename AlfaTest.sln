@@ -5,7 +5,12 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlfaTest.Web", "AlfaTest.Web\AlfaTest.Web.csproj", "{5346F8D3-8A51-4B97-B19E-F1A13AF06484}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlfaTest.Services", "AlfaTest.Services\AlfaTest.Services.csproj", "{D1BA47A2-A700-4A7E-876B-AEE04AB772ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlfaTest.Services", "AlfaTest.Services\AlfaTest.Services.csproj", "{D1BA47A2-A700-4A7E-876B-AEE04AB772ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentations", "Documentations", "{0F703B06-2F60-4890-912D-6FB75EF0EBC7}"
+	ProjectSection(SolutionItems) = preProject
+		Documentations\About.docx = Documentations\About.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
