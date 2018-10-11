@@ -1,0 +1,61 @@
+﻿@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h3>Валюта:</h3>
+
+<select id="dropDownListCourses" name="Courses" class="form-control" onchange = "UpdateCourse(this);">
+	<option value="">-- выберите значение --</option>
+</select>
+
+<hr/>
+
+<h3>Курс:</h3>
+
+<div id="courseValue">
+
+</div>
+
+@section scripts
+{
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			$.ajax({
+				type: "POST",
+				url: '../Home/LoadData',
+				async: false,
+				success: function (result) {
+
+					var json = JSON.parse(result);
+
+					var select = document.getElementById("dropDownListCourses");
+
+					$.each(json.Valute, function (key, value) {
+						var option = document.createElement('option');
+						option.text = key;
+						option.value = JSON.stringify(value);
+						select.add(option);
+					});
+				}
+			});
+		});
+
+		function UpdateCourse(obj) {
+
+			var div = document.getElementById("courseValue");
+			var item = obj.value;
+			try {
+				var json = JSON.parse(item);
+				value = json.Value;
+				div.innerText = value;
+			}
+			catch (e){
+				div.innerText = "";
+			}		
+		}
+
+	</script>
+}
