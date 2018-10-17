@@ -15,7 +15,6 @@ namespace AlfaTest.Services
 				webClient.Encoding = Encoding.UTF8;
 				var json = webClient.DownloadString(_url);
 
-
 				return json;
 			}
 		}
